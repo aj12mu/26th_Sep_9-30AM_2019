@@ -1,0 +1,60 @@
+
+
+SendKeys:-->
+	=> In general sendkeys is a method, which helps to type text into editbox.
+	=> Sendkeys also support "keyboard shortcuts" and "characters sequences"
+		to use on selected element.
+
+	Syntax:-->
+		=>For Characters Sequences.
+		
+		driver.findElement(By.id("x")).sendeys("ABCDE--Z");
+		driver.findElement(By.id("x")).sendeys(keys.chord("abcd"));
+
+	Syntax:-->
+		=> For Keyboard shortcuts
+		
+		driver.findElement(By.id("X")).sendkeys(Keys.TAB);
+
+	Syntax:-->
+		=> Combination of keyboard shortcuts and characters sequences
+
+		driver.findElement(By.id("X")).sendkeys("abcd",Keys.TAB);
+		driver.findElement(By.id("X")).sendkeys("abcd"+Keys.TAB);
+
+	Syntax:-->
+		=> Combination of keyboard shortcuts 
+	
+		driver.findElement(By.id("X")).sendkeys(Keys.TAB,Keys.TAB);
+
+		
+	Note:-->
+		
+		Senkeys method not only usefull to type text into editbox, And
+		it also support keyboard shortcuts to perform on other object
+		like  dropdown,chekcbox,radiobutton ---etc.
+
+=================================================================>>
+
+Why Clear command is neccessary before Sendkeys method:-->
+	
+	=> To avoid append text option at editbox.
+	=> Because sendkeys accept keyboard shortcuts, For keyboard shortcuts
+		selenium doesn't send exception on wrong element 		identification.
+	=> Clear command is specially designed to clear text at editbox, Incase
+	     on wrong identification clear method throw exception  "Selected 	     element is not clear type"
+=============================================================
+How to Identify Link at webpage:-->
+	
+
+
+
+
+
+
+
+
+
+
+
+
