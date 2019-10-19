@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Verify_Multiple_dropdown_option_selection 
-{
+public class Verify_Deselecting_Option_From_MultipleSelection {
+
 	public static void main(String[] args) throws Exception {
 		
 		//Locate chrome browser in currnet system
@@ -44,11 +44,25 @@ public class Verify_Multiple_dropdown_option_selection
 			//Decision statemenet to verify dropdown accept maximum selection equals to 3.
 			if(Count==3)
 			{
-				System.out.println("Testpass:--> As Expected dropdown accepted maximum selection");
+				//Deselect Single option 
+				StateDropdown.deselectByIndex(4);
+				
+				//Get All Selected option and then retrieve option count
+				int Dcount=StateDropdown.getAllSelectedOptions().size();
+				
+				//Decision statemenet to verify deselection
+				if(Dcount==2)
+				{
+					System.out.println("Testpass:--> Deselected single option from multiple selection");
+				}
+				else
+				{
+					System.out.println("Testfail:--> Unable to deselection single option from multiple selection");
+				}
 			}
 			else
 			{
-				System.out.println("Testfail:--> Mismatch in multiple dropdown selection count");
+				System.out.println("failed to select multiple selection maximum as 3");
 			}
 			
 			
@@ -57,9 +71,8 @@ public class Verify_Multiple_dropdown_option_selection
 		{
 			System.out.println("Dropdown is single option type");
 		}
-		
+				
 
-		
 	}
 
 }
