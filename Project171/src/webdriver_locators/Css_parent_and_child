@@ -1,17 +1,13 @@
-Example:--> Identify location with parent node..
+Example1:--> Identify location with parent node..
 
 HtmlSource:-->
-				<div id="reg_container"  class="form">
-							<input id="12ed345" type="text"></input>
-				</div>
-
-
+		<div id="reg_container"  class="form">
+				<input id="12ed345" type="text">    -----> Target
+		</div>
 syntax:-->
-				By.cssSelector("")
-
-
+				By.cssSelector("div[id='reg_container'] > input")
 ================================================================
-Example1:--->
+Example2:--->
 Recognize object when parent element having single child element
 ------------->Html Source--------->   
 
@@ -31,22 +27,22 @@ Recognize object when parent element having single child element
 Syntax:-->
 	parenttagname[property='pvalue'] > childtagname
 
-	By.cssSelector(");
+	By.cssSelector("div[id='reg_login'] > input");
 
 ==============================================================================
-Example2:-->
+Example3:-->
 Recognize object when parent element having Group child element
 ------------->Html Source--------->   
 
 <html>
 <body>
 			<div id="reg_container"  class="form">
-						<input id="email" type="text"></input>
+					<input id="email" type="text"></input>
 			</div>
 
 			<div id="reg_login"  class="form">
-						<input id="sample" class="abc"></input>
-						<input id="email" type="text"></input>  ------>>>>TargetElement	
+					<input id="sample" class="abc"></input>
+					<input id="email" type="text"></input>  ------>>>>TargetElement	
 			</div>
 </body>
 </html>
@@ -54,9 +50,10 @@ Recognize object when parent element having Group child element
 Syntax:-->
 	parenttagname[property='pvalue'] > childtagname[prop='pvalue']
 
-	By.cssSelector("");
+	By.cssSelector("div[id='reg_login'] > input[id='email']");
+	By.cssSelector("input[id='sample'] + input[id='email']");
 ----------------------------------------------------------------------	
-Example3:-->
+Example5:-->
 Recognize object when parent-element having duplicate child-elements
 Htmlsource:--->
 
@@ -79,8 +76,9 @@ Cssposition:--->
 			
 Relative syntax with position:--->
 				
-				
-				
+			By.cssSelector("div[id='reg_login'] > input:nth-child(2)")
+			By.cssSelector("div[id='reg_login'] > input:nth-of-type(2)")
+			By.cssSelector("div[id='reg_login'] > input:nth-last-child(3)")
 ------------------------------------------------------------->>
 Example:-->
 		recognize element with position
