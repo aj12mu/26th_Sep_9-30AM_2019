@@ -104,24 +104,10 @@ HtmlSource:-->
 				tagname[int position]
 				
 				By.xpath("/html/body/div[2]/input[2]")     --> Absolute
-				By.xpath("//input[2]")                     --> Xpath index          
+				By.xpath("//input[2]")     --> Xpath index          
 ----------------------------------------------------------------
 Example4:-->
 Recognize object with multiple attributes[using <AND> comparision]
-
-Htmlsource:--->
-
-<html>
-<body>
-	<div id="reg_container"  class="form">
-		<input id="email" type="text"></input>
-	</div>
-	<div id="reg_login"  class="form">
-		<input id="email" type="email"></input>  ------>>>>TargetElement	
-	</div>
-</body>
-</html>	
-
 
 Syntax:-->
 			//tagname[@prop='pvalue'  and  @prop='pvalue']
@@ -132,16 +118,6 @@ Syntax:-->
 Example5:-->
 Recognize object with multiple attributes[using <OR> comparision]		
 	
-HtmlSource:-->		
-<html>
-<body>
-	<div id="reg_login"  class="form">
-		<div id="sample" class="abc"></div>
-		<div id="sample" name="user"> Create Account</div>  ------>>>>TargetElement	
-	</div>
-</body>
-</html>	
-
 Syntax:-->
 		 //tagname[@prop='pvalue' or @prop='pvalue']
 		 //tagname[@prop='pvalue' or text()='visibletext']
@@ -193,7 +169,7 @@ Example 8:--->
 </body>
 </html>		
 					
-		Syntax:-->
+		Syntax:-->  By.xpath("(//input[@id='email'])[2]")
 ----------------------------------------------------------------------------
 Example9:-->
 		Recognize object using following sibling
@@ -226,7 +202,7 @@ HtmlSource:-->
 		
 		
 			By.xpath("//input[@id='firstname']/following-sibling::div[2]")
-		    By.xpath("//li[@class='roundtrip']/following-sibling::div")
+		    By.xpath("//li[@class='roundtrip']/following-sibling::div[1]")
 		
 ---------------------------------------------------------------------------
 Example9:-->
@@ -262,7 +238,6 @@ HtmlSource:-->
 		
 		syntax:-->
 				By.xpath("//input[@id='firstname']/preceding-sibling::div[2]")
-
-
+----------------------------------------------------------------------------
 
 
