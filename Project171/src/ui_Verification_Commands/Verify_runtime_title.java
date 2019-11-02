@@ -1,9 +1,12 @@
 package ui_Verification_Commands;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Verify_runtime_title {
+public class Verify_runtime_title 
+{
 
 	public static void main(String[] args) 
 	{
@@ -23,8 +26,29 @@ public class Verify_runtime_title {
 		
 		//Verify Expected and Runtime title equal comparision
 		boolean flag=Runtime_title.equals(Exp_title);
-		System.out.println("Selenium page title verification status is => "+flag);
-
+		
+		if(flag==true)
+		{
+			System.out.println("Selenium page title verification status is => "+flag);
+			
+				WebElement Download_tab=driver.findElement(By.xpath("//a[@title='Get Selenium']"));
+				Download_tab.click();
+				
+				if(driver.getTitle().equals("Downloads"))
+					System.out.println("Downlaod page verified");
+				else
+					System.out.println("download page not verified");
+		}
+		else
+		{
+			System.out.println("Preconditon failed wrong title presented for selenium homepage => "+flag);
+		}
+		
+		
+		
+		
+		
+		
 	}
 
 }
