@@ -75,11 +75,38 @@ getwindowhandles:-->
 		Set<String> allwidows=driver.getWindowhandles();
 		
 		Note:--> above method we use to switch to between multiple windows.
-					  
+==================================================================
+getText:-->
+		Method capture selected elemnet innertext.
 		
+		Note:-->
+				1. Capture only visible at webpage, On Hidden
+					element it return empty status.
+					
+				2. Capture selected element and it's child
+				    visible text.					  
 		
-		
-		
+		Syntax:-->
+				WebElement Element=driver.findElement(by.id("id"));
+				String Element_innertext=Element.getText();
+				System.out.println(Element_innertext);
+====================================================================		
+getAttribute("propertyname");
+	
+	Method capture runtime attribute value using attributename.
+				  
+				  
+		Syntax:-->  
+		  	WebElement Element=driver.findElement(By.id("x"));
+		  	String value=Element.getAttribute("attributename");
+		  	System.out.println(value);	
+		  	
+				  	
+  	Note:--> Developer use attributes, to chanage runtime
+  			behaviour of element. by capture element attributes
+  			at runtime we can prove element behaviour available
+			w.r.t client requirement.
+======================================================================		
 		
 		
 					
