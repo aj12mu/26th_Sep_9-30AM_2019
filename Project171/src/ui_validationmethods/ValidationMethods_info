@@ -1,0 +1,98 @@
+Validation Commands:-->
+	In Selenium all validation commands starts with "IS" keyword.
+	
+	Element validation commands
+		IsDisplayed
+		IsEnabled
+		IsSelected
+	
+	Dropdown Validation commands:-->
+	
+		IsMultiple
+==============================================================
+IsDisplayed:-->
+		Method verify selected element visible state at webpage and
+		return boolean value true/false.
+		
+		true => Return true when element is visible at webpage
+		false=> Return false when element is hidden at webpage
+		
+		
+		Syntax:-->
+		
+				WebElement Element=driver.findElement(By.id("id"));
+				boolean flag=Element.isDisplayed();
+				System.out.println("Element visible status is => "+flag);
+						
+====================================================================		
+=>IsEnabled:-->
+				=> Method verify element enabled or disabled status
+				=> Boolean return type method, Only return true/false.
+				=> Method return true when selected element ready state is ON    
+						[Element is enabled and accept all type of actions]
+						
+				=> Method return flase when selected element ready state is OFF  
+						[Element is disabale and not accepting any type of action]
+								
+			Syntax:-->
+					//Identify Element
+					WebElement Element=driver.findElement(By.id("x"));
+					
+					boolean flag=Element.IsEnabled();
+					System.out.println("Element Enabled "+flag);		
+		
+=====================================================================>>		
+=>IsSelected:-->
+			Method return true/false  on element selection state
+			for radio button and checkboxes.
+			
+			Syntax:-->
+					//Identify Element
+					WebElement Element=driver.findElement(By.id("x"));
+					
+					boolean flag=Element.Isselected();
+					System.out.println("Element Selected "+flag);
+					
+		
+-------------------------------------------------------------			
+Example:--> Inorder to select/deselect checkbox we need to follow
+			below syntax.Because checkboxes to select and deselect 
+			we follow same command [Click..]
+	
+to deselect checkbox :---->
+
+			//Identify Element
+			WebElement Checkbox=driver.findElement(By.id("x"));
+	
+			if(Checkbox.isSeelcted())
+			{
+				Checkbox.click();
+			}
+	
+to select checkbox:-->
+
+			//Identify Element
+			WebElement Checkbox=driver.findElement(By.id("x"));
+	
+			if(!Checkbox.isSeelcted())
+			{
+				Checkbox.click();
+			}
+=======================================================================
+Expectedconditions:-->
+		Class contain set of validation commands, But most times expected
+		conditions use during explicitwait commands.
+		
+		
+		
+		boolean flag=Expectedconditons.TitleIs("Google").Apply(driver);
+		System.out.println("Title verification status is => "+flag)
+		
+		
+		
+		
+				
+		
+		
+		
+		
