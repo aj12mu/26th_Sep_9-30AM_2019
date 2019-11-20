@@ -5,10 +5,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-public class Sendkeys_On_Page {
+public class Sendkeys_On_Page 
+{
 
 	public static void main(String[] args) 
 	{
@@ -35,8 +35,6 @@ public class Sendkeys_On_Page {
 		 * 
 		 * https://www.firstnaukri.com/jobs-internship
 		 */
-		
-	
 		
 	}
 
