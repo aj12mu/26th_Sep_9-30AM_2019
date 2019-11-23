@@ -28,6 +28,7 @@ public class ValidtionCommands_Using_ExpectedConditions_Class {
 		System.out.println("Facebook url verification status is => "+flag1);
 		
 		
+		//Using Expected conditions verify elemnet presented at webpage
 		WebElement Email=ExpectedConditions.visibilityOf
 				(driver.findElement(By.id("email"))).apply(driver);
 		Email.clear();
