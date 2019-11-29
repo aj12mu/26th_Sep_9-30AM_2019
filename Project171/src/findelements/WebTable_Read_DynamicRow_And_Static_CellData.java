@@ -2,16 +2,17 @@ package findelements;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class WebTable_Read_Data_From_Specific_Row_And_Cell {
+public class WebTable_Read_DynamicRow_And_Static_CellData 
+{
 
 	public static void main(String[] args) 
 	{
-
 		//Locate chrome browser in currnet system
 		System.setProperty("webdriver.chrome.driver", "browser_drivers\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
@@ -25,27 +26,33 @@ public class WebTable_Read_Data_From_Specific_Row_And_Cell {
 		//Identifying Table at Webpage
 		WebElement Table=driver.findElement(By.cssSelector("#pnl_Bse > table"));
 		
-		//Gathering all list of rows available under table.
+		//Find list of rows undert webtable
 		List<WebElement> rows=Table.findElements(By.tagName("tr"));
 		
-		//Identifying 6th row at webtable
-		WebElement SelectedRow=rows.get(5);
+		//Get Object count at list
+		int Row_Count=rows.size();
 		
-		//Finding list of cells under Selected row
-		List<WebElement> cells=SelectedRow.findElements(By.tagName("td"));
+		//Applying for loop to iterate
+		for (int i = 1; i < Row_Count; i++) 
+		{
+			//It targt every row in webtable by using for loop increment.
+			WebElement DynamicRow=rows.get(i);
+			
+			//Get Collection of Cell count under each dynamic row.
+			List<WebElement> cells=DynamicRow.findElements(By.tagName("td"));
+			
+			String Compay_Name=cells.get(0).getText();
+			String High_Price=cells.get(3).getText();
+			String Low_Price=cells.get(4).getText();
+			
+			System.out.println(Compay_Name+"   "+High_Price+"   "+Low_Price);
+			
+			
+		}
 		
-		//target any Selected cells using index number
-		String Company_Name=cells.get(0).getText();
-		String High_Price=cells.get(3).getText();
-		String Low_Price=cells.get(4).getText();
 		
-		System.out.println(Company_Name+"   "+High_Price+"   "+Low_Price);
-		
-		
-		//get 5th row and first cell record
-		String New=Table.findElements(By.tagName("tr")).get(5)
-				.findElements(By.tagName("td")).get(0).getText();
-		System.out.println(New);
+				
+
 	}
 
 }
