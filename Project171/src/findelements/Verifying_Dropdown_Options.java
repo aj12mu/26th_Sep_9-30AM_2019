@@ -31,6 +31,11 @@ public class Verifying_Dropdown_Options
 		//IDentify state dropdown
 		WebElement State_Dropdown=driver.findElement(By.id("customState"));
 				
+		
+		WebElement Signin_username=driver.findElement(By.xpath("//div[2]/div/input[1]"));
+		Signin_username.clear();
+		Signin_username.sendKeys("Hello");
+		
 
 	}
 

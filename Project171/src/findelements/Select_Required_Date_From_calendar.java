@@ -1,12 +1,13 @@
 package findelements;
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import pageobject.Variable.FB_locators;
 
 public class Select_Required_Date_From_calendar 
 {
@@ -22,17 +23,14 @@ public class Select_Required_Date_From_calendar
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				
-		
 		WebElement Departure_Date_cal=driver.findElement(By.id("dpt_date"));
 		//Click to open calendar
 		Departure_Date_cal.click();
 		
-		
 		String Exp_month="March 2020";
 		String Exp_date="1";
 		
-		
-		
+	
 		//outter loop to click Next button
 		for (int i = 0; i < 5; i++) 
 		{
@@ -44,7 +42,6 @@ public class Select_Required_Date_From_calendar
 			//Capture avtive month header.
 			WebElement Month_Header_location=driver.findElement(By.xpath("(//th[@class='month'])[1]"));
 			String Act_Month=Month_Header_location.getText();
-			
 			
 		
 			if(Act_Month.equals(Exp_month))
@@ -63,6 +60,8 @@ public class Select_Required_Date_From_calendar
 			}
 			
 		}
+		
+		
 		
 		
 		

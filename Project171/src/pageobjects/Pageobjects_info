@@ -1,0 +1,46 @@
+Page Objects:--->
+
+ Within your web app's UI there are areas that your tests
+ interact with. A Page Object simply models these as 
+ objects within the test code.So that Team member can reuse
+ it repeatedly without hardcoding.
+ 
+  This reduces the amount of duplicated code 
+  it means that if the UI changes, the fix need only
+  be applied in one place.
+  
+  
+  
+  pagefactory:-->
+  
+  		pagefactory is a part of pageobject, It contains
+  		library class called pagefactory, which supports
+  		to convert simple objects into testcode..
+ =======================================================================
+  		
+@FindBy:-->
+
+  	// The element is now looked up with name attribute.
+    @FindBy(how = How.NAME, using = "q")
+    private WebElement searchBox;
+    
+    //Without using How property
+    @FindBy(name="q")
+    private WebElement searchBox;
+    
+@CacheLookup:-->
+    
+     // Annotation never look it up once it has been used the first time
+     @FindBy(how = How.NAME, using = "q")
+     @CacheLookup 
+     private WebElement searchBox;
+     
+  
+ @FindBys:-->
+ 
+ 		=> Annoation Store set of objects using List<WebElement> reference.   
+    	@FindBys(@FindBy(xpath="//select"))
+		public List<WebElement> DOB_list;
+		
+===========================================================================		
+		
