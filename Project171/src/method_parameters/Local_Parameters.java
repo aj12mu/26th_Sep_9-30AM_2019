@@ -2,19 +2,21 @@ package method_parameters;
 
 public class Local_Parameters 
 {
-	
+	//Method without parameter
 	public void print_tool()
 	{
 		String name="WebDriver";
 		System.out.println(name);
 	}
 	
+	//Method with sigle parameter
 	public void print_tool(String toolname)
 	{
 		String name=toolname;
 		System.out.println(name);
 	}
 	
+	//Method with multiple parameters
 	public void print_tool(String toolname,double price)
 	{
 		String name=toolname;
@@ -30,13 +32,15 @@ public class Local_Parameters
 		Local_Parameters obj=new Local_Parameters();
 		//Calling method without argument
 		obj.print_tool();
+		obj.print_tool();
+		System.out.println("\n");
 		
-		//Calling method with argument
-		obj.print_tool("Appium");
+		//Calling Method with arguments
 		obj.print_tool("Cucumber");
+		obj.print_tool("Selenium-IDE");
 		
-		//Calling method with multiple argument
-		obj.print_tool("IDE", 1000.00);
+		//Calling method with multiple arguments
+		obj.print_tool("Webdriver", 1200.00);
 
 	}
 
