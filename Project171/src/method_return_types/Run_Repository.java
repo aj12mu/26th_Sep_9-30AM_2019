@@ -2,7 +2,8 @@ package method_return_types;
 
 import org.openqa.selenium.By;
 
-public class Run_Repository {
+public class Run_Repository 
+{
 
 	public static void main(String[] args) 
 	{
