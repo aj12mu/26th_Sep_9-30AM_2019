@@ -46,6 +46,28 @@ public class Read_Data_From_Multiple_Rows
 			System.out.println(UID);
 			
 		}
+		
+		
+		
+		
+		
+		/*
+		 * getFirstCellnumber:-->
+		 * 		Method return integer count from which cell data
+		 * 		started from selected row.
+		 */
+		
+		/*
+		 * getLastCellnumber:-->
+		 * 		Method return integer count for number of cells
+		 * 		data available with in row.
+		 */
+		
+		int FirstCell=sht.getRow(1).getFirstCellNum();
+		System.out.println("Cell Number Started at index => "+FirstCell);
+		
+		int CellCount=sht.getRow(1).getLastCellNum();
+		System.out.println("With in row total cells data count is => "+CellCount);
 
 	}
 
