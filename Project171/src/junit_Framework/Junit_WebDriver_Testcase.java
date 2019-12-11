@@ -1,8 +1,6 @@
 package junit_Framework;
 
 import java.io.File;
-import java.lang.reflect.Method;
-
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterAll;
@@ -10,6 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -37,6 +36,15 @@ class Junit_WebDriver_Testcase
 		Assert.assertEquals(Exp_title, driver.getTitle());
 	}
 	
+	@Test
+	void Tc003_Verify_Games_link() 
+	{
+		driver.findElement(By.xpath("//a[@href='/games/']")).click();
+		String Exp_title="Games";
+		Assert.assertEquals(Exp_title, driver.getTitle());
+	}
+	
+	
 	
 	
 	@BeforeAll
@@ -61,10 +69,13 @@ class Junit_WebDriver_Testcase
 	}
 
 	@AfterEach
-	void tearDown() throws Exception 
+	void tearDown(TestInfo testinfo) throws Exception 
 	{
+		//Get Aftereach annotation constucted methodname
+		String methodName = testinfo.getTestMethod().get().getName();
+		
 		File Src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(Src, new File("screens\\img.png"));
+		FileUtils.copyFile(Src, new File("screens\\"+methodName+".png"));
 		
 	}
 
