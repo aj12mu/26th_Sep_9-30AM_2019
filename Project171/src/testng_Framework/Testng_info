@@ -132,6 +132,7 @@ How to Ignore method execution with in testng class
 
 Note:-->
 	=> find result at index ignored methods
+How to ignore method from test suite file:-->
 	=> By using << exclude  >>  tag we can ignore method from suite file
 ---------------------------------------------------------------------------------------------------------------------------------
 

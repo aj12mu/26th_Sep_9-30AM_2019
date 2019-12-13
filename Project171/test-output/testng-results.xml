@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="4" total="8" passed="4">
   <reporter-output>
+    <line>
+      <![CDATA[Browser launch successfull]]>
+    </line>
+    <line>
+      <![CDATA[Load application successfull]]>
+    </line>
+    <line>
+      <![CDATA[Account login successfull]]>
+    </line>
+    <line>
+      <![CDATA[Account signout successfull]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63" started-at="2019-12-12T10:00:51 IST" finished-at="2019-12-12T10:00:51 IST">
+  <suite name="Default suite" duration-ms="62" started-at="2019-12-13T10:54:04 IST" finished-at="2019-12-13T10:54:04 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="63" started-at="2019-12-12T10:00:51 IST" finished-at="2019-12-12T10:00:51 IST">
-      <class name="testng_Framework.My_Testng_Test">
-        <test-method status="PASS" signature="tc001()[pri:0, instance:testng_Framework.My_Testng_Test@35d176f7]" name="tc001" duration-ms="11" started-at="2019-12-12T10:00:51 IST" finished-at="2019-12-12T10:00:51 IST">
+    <test name="Default test" duration-ms="62" started-at="2019-12-13T10:54:04 IST" finished-at="2019-12-13T10:54:04 IST">
+      <class name="testng_Framework.Testng_Method_Dependencies">
+        <test-method status="PASS" signature="SetUp_browser()[pri:0, instance:testng_Framework.Testng_Method_Dependencies@63e2203c]" name="SetUp_browser" is-config="true" duration-ms="0" started-at="2019-12-13T10:54:04 IST" finished-at="2019-12-13T10:54:04 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc001 -->
-      </class> <!-- testng_Framework.My_Testng_Test -->
+        </test-method> <!-- SetUp_browser -->
+        <test-method status="PASS" signature="Browser_launch()[pri:0, instance:testng_Framework.Testng_Method_Dependencies@63e2203c]" name="Browser_launch" duration-ms="16" started-at="2019-12-13T10:54:04 IST" finished-at="2019-12-13T10:54:04 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser launch successfull]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Browser_launch -->
+        <test-method status="PASS" signature="User_login()[pri:2, instance:testng_Framework.Testng_Method_Dependencies@63e2203c]" name="User_login" duration-ms="0" started-at="2019-12-13T10:54:04 IST" depends-on-methods="testng_Framework.Testng_Method_Dependencies.App_Load" finished-at="2019-12-13T10:54:04 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[Account login successfull]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- User_login -->
+        <test-method status="PASS" signature="App_Load()[pri:1, instance:testng_Framework.Testng_Method_Dependencies@63e2203c]" name="App_Load" duration-ms="0" started-at="2019-12-13T10:54:04 IST" depends-on-methods="testng_Framework.Testng_Method_Dependencies.Browser_launch" finished-at="2019-12-13T10:54:04 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[Load application successfull]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- App_Load -->
+        <test-method status="PASS" signature="Close_browser()[pri:0, instance:testng_Framework.Testng_Method_Dependencies@63e2203c]" name="Close_browser" is-config="true" duration-ms="0" started-at="2019-12-13T10:54:04 IST" finished-at="2019-12-13T10:54:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close_browser -->
+        <test-method status="PASS" signature="User_Signout()[pri:7, instance:testng_Framework.Testng_Method_Dependencies@63e2203c]" name="User_Signout" duration-ms="0" started-at="2019-12-13T10:54:04 IST" depends-on-methods="testng_Framework.Testng_Method_Dependencies.User_login" finished-at="2019-12-13T10:54:04 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[Account signout successfull]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- User_Signout -->
+      </class> <!-- testng_Framework.Testng_Method_Dependencies -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

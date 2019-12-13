@@ -48,7 +48,7 @@ class Junit_Runner_With_Extent_Reports extends Testcases
 	{
 		//Get Aftereach annotation constucted methodname
 		String methodName = testinfo.getTestMethod().get().getName();
-		reporter.startTest(methodName);
+		test=reporter.startTest(methodName);
 	}
 
 	@AfterEach
