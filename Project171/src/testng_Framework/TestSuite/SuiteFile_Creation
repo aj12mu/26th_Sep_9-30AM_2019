@@ -1,0 +1,23 @@
+Running Testng classes from suite file:--->
+
+Creation of XML file:--->
+
+	Right click on project--->New---->Click Others
+	Select XML File---> EnterFilename with extension click on finish
+
+	Select source tab in XML file
+
+  => copy or type suite file along with class name and packagename..
+
+<suite name="sutie1">
+		<test name="test1" verbose="2">
+				<classes>
+						<class name="packagename.classname"></class>
+				</classes>
+		</test>
+</suite>
+
+
+Run Suite File:--->
+		Right click on suite file---->Run as ---->  TestNg Suite 
+		Shortcut ===> F11

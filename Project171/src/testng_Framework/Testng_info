@@ -233,36 +233,50 @@ Creation of XML file:--->
 
 Run Suite File:--->
 		Right click on suite file---->Run as ---->  TestNg Suite 
-
+		Shortcut ===> F11
 
 ================How to Assign groups to TestNg  test=========
 
-@Test(groups="groupname")             ==> Test assigning to single groups
-
+@Test(groups="groupname")            ==> Test assigning to single groups
+public void tc001()
+{
+}
 
 @Test(groups={"group1","group2"})     ==> Test assigning to multiple groups
-
+public void tc002()
+{
+}
 ================Test Suite to run Groups --->
 
+<suite name="default-suite">
 
 	<groups>
 		<run>
-			<include name="G2"></include>
+			<include name="Groupname"></include>
 		</run>
 	</groups>
-
-
+	
+	<test name="test1>
+			<classes>
+					<!-- list of classes to execute -->
+			</classes>
+	</test>
+		
+</suite>
+	
+	
+====================================================
 -----------How to Pass parameter from XML file-------------->>
 
 <suite name="sutie1" >
        <test name="test1">
+       
+       			<parameter name="url" value="http://hotmail.com"></parameter>
+				<parameter name="uid" value="sunilreddy"></parameter>
+				<parameter name="pwd" value="hello123"></parameter>
+					
 				<classes>
 					<class name="packagename.classname">
-					
-							<parameter name="url" value="http://hotmail.com"></parameter>
-							<parameter name="uid" value="sunilreddy"></parameter>
-							<parameter name="pwd" value="hello123"></parameter>
-					
 					</class>
 				</classes>
        </test>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="default-suite">
+		<test name="test1" verbose="2">
+				<classes>
+						<class name="testng_Framework.TestSuite.Class1">
+								<methods>
+										<include name="tc002"></include>
+								</methods>
+						</class>
+						
+						<class name="testng_Framework.TestSuite.Class2">
+								<methods>
+										<exclude name="tc004"></exclude>
+								</methods>
+						</class>
+						
+						<class name="testng_Framework.Testng_Method_Dependencies">
+								<methods>
+											<include name="Browser_launch"></include>
+											<include name="App_Load"></include>
+											<include name="User_login"></include>
+											<include name="User_Signout"></include>
+											
+								</methods>
+						</class>
+						
+						
+				</classes>
+		</test>
+</suite>
