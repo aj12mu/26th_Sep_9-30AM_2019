@@ -371,7 +371,7 @@ Note:--->  We can find Parameter information at emailable report.
 Creating Dataprovider class:--->
 		Right click on package---->Create testng Class--->
 		Enter Classname--->Select Dataprovider annoation
-		click on finish
+		click on finish.
 
 ---------How to maintain data under dataprovider method--------->
 
@@ -406,7 +406,7 @@ How to retrievedata from different class..
 @Test(dataProvider="methodname", dataProviderClass = classname.class)
 public void (String var,String var)
 {
-	//Data provider method should declare with static access specifier..
+	
 }
 
 ===============================================================>
