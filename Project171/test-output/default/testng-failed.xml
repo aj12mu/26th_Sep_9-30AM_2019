@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [default]">
+  <listeners>
+    <listener class-name="testng_Framework.Test_listners.Run_Listeners"/>
+  </listeners>
+  <test thread-count="5" name="test1(failed)">
     <classes>
       <class name="testng_Framework.Test_listners.MyTest">
         <methods>
@@ -11,5 +14,5 @@
         </methods>
       </class> <!-- testng_Framework.Test_listners.MyTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [default] -->
